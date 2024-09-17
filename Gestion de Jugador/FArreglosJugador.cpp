@@ -34,6 +34,17 @@ void llenarVectorTamanioEstudiantes(Jugador * &vectorEstudiantes, int tamanio){
     
 }
 
-char reservaMemoriaCadena(char * &cadena, int tamanio){
-    cadena = (char*)malloc(sizeof(char)*tamanio);
+// crear la funcion para agregar un jugador al final del vector
+void agregarfinal(Jugador * &vector, int tamanio, Jugador newJugador){
+    Jugador * it = (Jugador*)malloc(sizeof(Jugador)*(tamanio + 1));
+    for(int i = 0; i < tamanio; i++){
+        *it = *vector;
+        it++;
+        vector++;
+    }
+    *it = newJugador;
+    it = it - tamanio - 1;
+    free(vector);
+    vector = it;
+    free(it);
 }

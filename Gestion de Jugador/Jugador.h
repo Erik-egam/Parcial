@@ -35,6 +35,10 @@ struct Jugador {
 
     }
 
+    // funcion para reservar los espacios de memoria que necesita el apellido del jugador
+    char reservaMemoriaCadena(int tamanio){
+    apellido = (char*)malloc(sizeof(char)*tamanio);
+}
 };
 
 
