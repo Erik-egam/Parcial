@@ -33,3 +33,7 @@ void llenarVectorTamanioEstudiantes(Jugador * &vectorEstudiantes, int tamanio){
     }
     
 }
+
+char reservaMemoriaCadena(char * &cadena, int tamanio){
+    cadena = (char*)malloc(sizeof(char)*tamanio);
+}

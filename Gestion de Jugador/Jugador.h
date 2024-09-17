@@ -28,9 +28,9 @@ struct Jugador {
     //Mostrar todo el contenido de la estructura/Jugador
     void mostrarContenido(){
         cout<<endl<<"******************"<<endl;
-        cout<<"Nombre: "<<this->apellido<<endl;
-        cout<<"Edad: "<<this->Dorsales<<endl;
-        cout<<"Promedio: "<<this->promedio_goles<<endl;
+        cout<<"Apellido: "<<this->apellido<<endl;
+        cout<<"Dorsales: "<<this->Dorsales<<endl;
+        cout<<"Promedio goles: "<<this->promedio_goles<<endl;
         cout<<"******************"<<endl<<endl;
 
     }
