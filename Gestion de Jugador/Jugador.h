@@ -13,6 +13,7 @@ struct Jugador {
 
     //Crear un estudiante con información precargada en RAM
     Jugador(char * pApellido, int pDorsales, double pPromedio_goles){
+        this ->apellido = (char*)malloc(sizeof(char)*50);
         this->apellido = pApellido;
         this->Dorsales = pDorsales;
         this->promedio_goles = pPromedio_goles;
@@ -20,6 +21,7 @@ struct Jugador {
 
     //Crear un estudiante completamente vacío
     Jugador(){
+        this ->apellido = (char*)malloc(sizeof(char)*50);
         this->apellido = "Jugador sin nombre";
         this->Dorsales = 0;
         this->promedio_goles = 0.0;
@@ -35,10 +37,6 @@ struct Jugador {
 
     }
 
-    // funcion para reservar los espacios de memoria que necesita el apellido del jugador
-    char reservaMemoriaCadena(int tamanio){
-    apellido = (char*)malloc(sizeof(char)*tamanio);
-}
 };
 
 

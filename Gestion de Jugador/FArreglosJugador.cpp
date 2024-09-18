@@ -23,7 +23,7 @@ void llenarVectorTamanio3Estudiantes(Jugador * &vectorEstudiantes, int tamanio){
 void llenarVectorTamanioEstudiantes(Jugador * &vectorEstudiantes, int tamanio){
     Jugador *itGrupo =  vectorEstudiantes;
     for (int i = 0; i < tamanio; i++)
-    {
+    {   
         cout << "ingrese el apellido del jugador --> ";
         cin >> (*itGrupo).apellido;
         cout << "ingrese el Dorsales del jugador --> ";
@@ -35,7 +35,7 @@ void llenarVectorTamanioEstudiantes(Jugador * &vectorEstudiantes, int tamanio){
 }
 
 // crear la funcion para agregar un jugador al final del vector
-void agregarfinal(Jugador * &vector, int tamanio, Jugador newJugador){
+void agregarFinal(Jugador * &vector, int tamanio, Jugador newJugador){
     Jugador * it = (Jugador*)malloc(sizeof(Jugador)*(tamanio + 1));
     for(int i = 0; i < tamanio; i++){
         *it = *vector;
