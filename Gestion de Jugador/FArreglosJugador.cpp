@@ -48,3 +48,31 @@ void agregarFinal(Jugador * &vector, int tamanio, Jugador newJugador){
     vector = it;
     free(it);
 }
+
+
+void eliminarJugador(Jugador * &vector, int tamanio, int posicion){
+    Jugador * it = (Jugador*)malloc(sizeof(Jugador)*(tamanio - 1));
+    for(int i = 0; i < tamanio; i++){
+        if(i==posicion){
+            vector++;
+        }else{
+            *it = *vector;
+            it++;
+            vector++;
+        }
+    }
+    free(vector);
+    it = it - tamanio + 1;
+    vector = it;
+    free(it);
+    
+};
+
+void mostrarVectores(Jugador *&vector, int tamanio){
+    Jugador * itGrupo = vector;
+    for(int i = 0; i < tamanio;i++){
+        cout << "++++++++++++++++++++++++++++++" << endl; 
+        (*itGrupo).mostrarContenido();
+        itGrupo++;
+    }
+}
