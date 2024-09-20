@@ -22,24 +22,19 @@ void llenarVectorTamanio3(Jugador * &vector, int tamanio){
 
 
 void llenarVectorTamanio(Jugador * &vector, int tamanio) {
+    
     Jugador *itGrupo = vector;
-
     for (int i = 0; i < tamanio; i++) {
-        char * pApellido;
-        pApellido = (char*)malloc(sizeof(char)*50);
-        int pDorsal;
-        double pPromedio;
-
-        cout << "Ingrese el apellido del jugador " << i + 1 << ": ";
-        cin >> *pApellido;
-        cout << "Ingrese el dorsal del jugador " << i + 1 << ": ";
-        cin >> pDorsal;
-        cout << "Ingrese el promedio de goles del jugador " << i + 1 << ": ";
-        cin >> pPromedio;
-
+        char * Apellido = (*itGrupo).apellido;
+        cin >> Apellido;
+        int dorsales;
+        cin >> dorsales;
+        double promedio;
+        cin >> promedio;
+        (*itGrupo).Dorsales = dorsales;
+        (*itGrupo).promedio_goles = promedio;
+        ++itGrupo;
         // Asignamos los datos al jugador en la posición actual
-        Jugador * pe = new Jugador(pApellido,pDorsal,pPromedio);
-        itGrupo++;
     }
 }
 

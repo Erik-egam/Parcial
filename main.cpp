@@ -14,7 +14,7 @@ int main (){
     
     llenarVectorTamanio3(Vector,tamanio);
     // funcion con intraccion con el usuario
-    // llenarVectorJugadores(Vector,tamanio);
+    // llenarVectorTamanio(Vector,tamanio);
     cout << "hacemos una muestra de los jugadores en el vector" << endl;
     mostrarJugadores(Vector,tamanio);
     cout << endl;
